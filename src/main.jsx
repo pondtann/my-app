@@ -6,6 +6,7 @@ import "./index.css";
 import RootLayout from "./routes/RootLayout.jsx";
 import Games from "./routes/Games.jsx";
 import Home from "./routes/Home.jsx";
+import HireMe from "./routes/HireMe.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "games", element: <Games /> },
+      { path: "hire-me", element: <HireMe /> },
     ],
   },
 ]);
