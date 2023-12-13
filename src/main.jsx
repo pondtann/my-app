@@ -7,15 +7,20 @@ import RootLayout from "./routes/RootLayout.jsx";
 import Games from "./routes/Games.jsx";
 import Home from "./routes/Home.jsx";
 import HireMe from "./routes/HireMe.jsx";
+import NewGame from "./routes/NewGame.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
-      { index: true, element: <Home /> },
-      { path: "games", element: <Games /> },
+      { path: "", element: <Home /> },
       { path: "hire-me", element: <HireMe /> },
+      {
+        path: "games",
+        element: <Games />,
+        children: [{ path: "create-game", element: <NewGame /> }],
+      },
     ],
   },
 ]);

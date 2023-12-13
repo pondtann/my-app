@@ -1,7 +1,9 @@
 function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <div className="align-middle container mt-6 m-auto">
+        <h1>Home</h1>
+      </div>
     </>
   );
 }
